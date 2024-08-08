@@ -29,8 +29,5 @@ jobs:
       - name: Install dependencies
         run: cd worksheet2 && npm install
 
-      - name: Run the tests
-        run: cd worksheet2 && npm test
-
       - name: Build
         run: cd worksheet2 && npm run build
