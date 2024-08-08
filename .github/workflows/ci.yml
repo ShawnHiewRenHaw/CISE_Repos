@@ -1,4 +1,4 @@
-name CI_action
+name: CI_action
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    Strategy:
+    strategy:
       matrix:
         node-version: [14.x]
     
@@ -18,10 +18,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js ${{ matrix.node-version }}
+      - name: Set up Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{matrix.node-version}}
 
       - name: Install dependencies
         run: npm install
